@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "standalone_app"
+description = "standalone app that depends on newer version of psycopg2 than depending project"
+version = "1.0.0"
+authors = ["Jacek Galowicz <jacek@galowicz.de>"]
+
+[tool.poetry.scripts]
+standalone-app-hello = "standalone_app.hello:main"
+
+[tool.poetry.dependencies]
+python = ">=3.7"
+psycopg2 = ">=2.9.6"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
